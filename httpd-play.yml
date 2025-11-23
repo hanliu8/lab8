@@ -1,0 +1,14 @@
+---
+- hosts: webservers
+  user: vagrant
+  become: yes
+  tasks:
+    - name: Install Apache web service
+      apt:
+        name: apache2
+        state: present
+    
+    - name: restart Apache service
+      service: 
+        name: apache2
+        state: restarted
