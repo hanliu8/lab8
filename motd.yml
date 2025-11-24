@@ -4,7 +4,7 @@
   user: vagrant
   become: true
   vars:
-    motd_warning: "WARNING: used by ICT faculty/students only.\n"
+    motd_warning: "WARNING: used by ICT faculty/students only.\n\n"
   tasks:
     - name: setup a Message Of The Day
       copy:
